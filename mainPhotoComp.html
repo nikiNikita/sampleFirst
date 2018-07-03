@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name-"viewpoint" content="widht=device-width">
+    <meta name="author" content="Nikita Sahare">
+    <title> PhotoCompetition </title>
+    <link rel="stylesheet" href="./css/stylePhotoComp.css">
+
+  </head>
+
+  <body>
+    <header>
+        <div class="container">
+           <div id="compname">
+             <h2>NNSS PHOTO COMPETITION</h2>
+          </div>
+          <div id="linkDec">
+            <nav>
+            <ul>
+              <li><a href="mainPhotoComp.html">home</a></li>
+              <li><a href="about.html">About</a></li>
+           </ul>
+         </nav>
+        </div>
+      </div>
+    </header>
+
+    <body>
+    <section>
+      <div class="container" id="leftside">
+        <h1>Capturing Moments .....</h1>
+        <p>When I have camera in my hand , I know No fear....</p>
+      </div>
+      <div class="container" id="rightside">
+        <!--  <h3> floating image </h3> -->
+        <div class="w3-content w3-section"  >
+           <img class="mySlides" src="./images/slide1.jpeg" style="width:100%">
+           <img class="mySlides" src="./images/slide2.jpeg" style="width:100%">
+           <img class="mySlides" src="./images/slide3.jpeg" style="width:100%">
+           <img class="mySlides" src="./images/slide4.jpeg" style="width:100%">
+           <img class="mySlides" src="./images/slide5.jpeg" style="width:100%">
+      </div>
+      <script>
+          var myIndex = 0;
+          funSlide();
+
+          function funSlide() {
+          var i;
+          var x = document.getElementsByClassName("mySlides");
+          for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+          }
+         myIndex++;
+         if (myIndex > x.length) {myIndex = 1}
+         x[myIndex-1].style.display = "block";
+         setTimeout(funSlide, 2000); // Change image every 2 seconds
+         }
+    </script>
+
+      </div>
+    </section>
+
+    <section id="mainForm">
+      <div class="container" >
+       <form >
+         <br />
+         <input type="text" placeholder="User Name">
+         <input type="password" placeholder="password"><br>
+         <a href="signUpForm.html" ><input type="button" value="SignUp"></a>
+         <input type="submit" value="LogIn">
+       </form>
+    </div>
+    </section>
+
+    <section>
+      <footer>
+        <div class="container">
+         <h3>copiright &copy Niki</h3>
+       </div>
+      </footer>
+    </section>
+  </body>
+
+
+
+
+</html>
